@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/2d6c57a581.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  
+  <title>Frontend Mentor | QR code component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body, *{
+      margin: 0;
+      padding: 0;
+    }
+
+    .main{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      padding-top: 10vh;
+      background-color: hsl(212, 45%, 89%);
+      height: 720px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .qr-code{
+      width: 100%;
+      border-radius: 10px;
+     }
+    .img-qr-code{
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      padding: 13px;
+      margin: 30px;
+      margin-right: 50px;
+      margin-left: 50px;
+      padding-bottom: 1vh;
+      border-radius: 10px;
+      flex-wrap: wrap;
+    }
+    .img-qr-code p{
+      padding-top: 10px;
+      color: hsl(220, 15%, 55%);
+    }
+    .main h1{
+      margin-top: 10vh;
+      color: hsl(218, 44%, 22%);
+    }
+    .img-qr-code h2{
+      color: hsl(218, 44%, 22%);
+    }
+
+    @media (min-width: 765px){
+
+    body{
+      background-image: url(/images/bg.png);
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+    .main{
+
+      width: 1000px;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: auto;
+      margin-top: 15vh;
+      padding-top: 0;
+      box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.2);
+
+      position: relative;
+      
+      
+    }
+    .qr-code{
+      width: 80%;
+      border-radius: 10px;
+     }
+
+    .img-qr-code{
+      display: block;
+      width: 200px;
+      height: 42vh;
+      justify-content: center;
+      box-shadow: 5px 8px 8px rgba(0, 0, 0, 0.2)
+    }
+    .img-qr-code p{
+      font-size: 12px;
+      padding-top: 10px;
+      color: hsl(220, 15%, 55%);
+    }
+    .main h1{
+      margin-top: 0;
+      color: hsl(218, 44%, 22%);
+      transition: all 0.5s ease-in-out;
+    }
+    .main h1:hover{
+      font-size: 40px;
+      color: #3685fe;
+    }
+
+    .main h1 i{
+      display: none;
+    }
+
+    .img-qr-code h2{
+      font-size: 20px;
+      color: hsl(218, 44%, 22%);
+    }
+    .attribution{
+      width: 1000px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <div class="main">
+    <h1>Scan QR Code <i class="fa-solid fa-arrow-right" style="display: none;"></i></h1>
+    <div class="img-qr-code">
+      <img class="qr-code" src="/images/image-qr-code.png" alt="qr-code">
+      <h2>Improving Frontend Skills</h2>
+      <p>Scan the QR code to visit frontend Mentor and taking you coding skills to next level! </p>
+    </div>
+    <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Vanderson Erlan</a>.
+  </div>
+  </div>
+  
+  
+</body>
+<script>
+  $('h1').hover(function(){
+
+      $('i').fadeIn(1500)
+
+    
+  });
+</script>
+</html>
